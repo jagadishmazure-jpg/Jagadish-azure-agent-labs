@@ -1,0 +1,71 @@
+name: ci
+on:
+  push: { branches: [main] }
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -e ".[dev]"
+      - name: Ruff
+        run: ruff check . && ruff format --check .
+      - name: Agent cards are current
+        run: python scripts/export_agent_cards.py --check
+      - name: Secrets scan
+        run: python scripts/secrets_scan.py
+
+  shared:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -e ".[dev]"
+      - name: Shared layer tests
+        run: pytest -q shared/tests
+
+  lab:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        lab:
+          - disaster-signal-fusion
+          - medical-eye-scan-multimodal
+          - road-network-maintenance-graph
+          - legal-document-compliance
+          - wind-turbine-continual-learning
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -e ".[dev]"
+      - name: Tests (offline, mocks)
+        run: pytest -q labs/${{ matrix.lab }}
+      - name: Eval gate
+        run: python labs/${{ matrix.lab }}/evals/run_eval.py --out evals-out
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: "eval-${{ matrix.lab }}", path: evals-out }
+
+  bicep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Bicep CLI (skip gracefully if unavailable)
+        id: install
+        continue-on-error: true
+        run: |
+          curl -fsSLo bicep https://github.com/Azure/bicep/releases/latest/download/bicep-linux-x64
+          chmod +x bicep && sudo mv bicep /usr/local/bin/bicep && bicep --version
+      - name: Build every lab's infra (compile only, never deployed)
+        if: steps.install.outcome == 'success'
+        run: for f in labs/*/infra/main.bicep; do echo "$f"; bicep build "$f" --stdout > /dev/null; done
+      - name: Bicep not available
+        if: steps.install.outcome != 'success'
+        run: echo "::warning::Bicep CLI could not be installed; infra build skipped"

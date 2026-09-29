@@ -1,0 +1,94 @@
+{
+ "doc_id": "bank-kyc-policy",
+ "domain": "banking",
+ "title": "Customer Due Diligence Policy - Northwind Credit Union",
+ "pages": [
+  {
+   "page": 1,
+   "lines": [
+    {
+     "text": "Customer Due Diligence Policy - Northwind Credit Union",
+     "confidence": 0.99
+    },
+    {
+     "text": "1. PURPOSE",
+     "confidence": 0.972
+    },
+    {
+     "text": "This policy sets the minimum steps staff follow before opening or reviewing a member account.",
+     "confidence": 0.959
+    },
+    {
+     "text": "2. CUSTOMER DUE DILIGENCE",
+     "confidence": 0.976
+    },
+    {
+     "text": "Staff verify identity, screen against sanctions lists and record the source of funds for every new member.",
+     "confidence": 0.969
+    },
+    {
+     "text": "Enhanced due diligence applies to politically exposed persons and high-risk jurisdictions.",
+     "confidence": 0.983
+    }
+   ],
+   "tables": [
+    {
+     "table_id": "bank-kyc-policy:t-risk-tiers",
+     "confidence": 0.973,
+     "rows": [
+      [
+       "Tier",
+       "Review cycle",
+       "Approver"
+      ],
+      [
+       "Low",
+       "36 months",
+       "Branch lead"
+      ],
+      [
+       "Medium",
+       "12 months",
+       "Compliance analyst"
+      ],
+      [
+       "High",
+       "6 months",
+       "BSA officer"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "page": 2,
+   "lines": [
+    {
+     "text": "Customer Due Diligence Policy - Northwind Credit Union - page 2",
+     "confidence": 0.99
+    },
+    {
+     "text": "3. RECORD RETENTION AND PRIVACY",
+     "confidence": 0.949
+    },
+    {
+     "text": "Identity records are retained for five years after the account closes and then securely destroyed.",
+     "confidence": 0.931
+    },
+    {
+     "text": "Personal data is processed only for due diligence and regulatory reporting.",
+     "confidence": 0.975
+    },
+    {
+     "text": "4. INTERNAL AUDIT",
+     "confidence": 0.951
+    },
+    {
+     "text": "Internal audit tests a sample of files each quarter and may inspect any record without notice.",
+     "confidence": 0.995
+    }
+   ],
+   "tables": []
+  }
+ ]
+}

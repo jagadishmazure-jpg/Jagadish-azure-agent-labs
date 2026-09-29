@@ -1,0 +1,7 @@
+{"closure_id": "CL-2019-w-W13-E0", "segment_id": "w-W13-E0", "year": 2019, "observed_extra_vehicle_minutes": 1475.9, "observed_stranded_trips": 0, "observed_disconnected": false, "observed_hospital_access_lost": false}
+{"closure_id": "CL-2020-w-W33-E3", "segment_id": "w-W33-E3", "year": 2020, "observed_extra_vehicle_minutes": 384.8, "observed_stranded_trips": 0, "observed_disconnected": false, "observed_hospital_access_lost": false}
+{"closure_id": "CL-2021-w-C1-C2", "segment_id": "w-C1-C2", "year": 2021, "observed_extra_vehicle_minutes": 0.0, "observed_stranded_trips": 47, "observed_disconnected": true, "observed_hospital_access_lost": true}
+{"closure_id": "CL-2022-w-W11-W12", "segment_id": "w-W11-W12", "year": 2022, "observed_extra_vehicle_minutes": 1684.8, "observed_stranded_trips": 0, "observed_disconnected": false, "observed_hospital_access_lost": false}
+{"closure_id": "CL-2023-w-W00-C1", "segment_id": "w-W00-C1", "year": 2023, "observed_extra_vehicle_minutes": 0.0, "observed_stranded_trips": 74, "observed_disconnected": true, "observed_hospital_access_lost": true}
+{"closure_id": "CL-2024-w-E0-E1", "segment_id": "w-E0-E1", "year": 2024, "observed_extra_vehicle_minutes": 1506.4, "observed_stranded_trips": 0, "observed_disconnected": false, "observed_hospital_access_lost": false}
+{"closure_id": "CL-2024-w-W02-W03", "segment_id": "w-W02-W03", "year": 2024, "observed_extra_vehicle_minutes": 5.8, "observed_stranded_trips": 0, "observed_disconnected": false, "observed_hospital_access_lost": false}

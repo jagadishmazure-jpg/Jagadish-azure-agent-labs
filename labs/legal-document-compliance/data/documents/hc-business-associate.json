@@ -1,0 +1,116 @@
+{
+ "doc_id": "hc-business-associate",
+ "domain": "healthcare",
+ "title": "Business Associate Agreement - Cedar Valley Clinics and Brightline Billing",
+ "pages": [
+  {
+   "page": 1,
+   "lines": [
+    {
+     "text": "Business Associate Agreement - Cedar Valley Clinics and Brightline Billing",
+     "confidence": 0.99
+    },
+    {
+     "text": "1. PERMITTED USES OF PROTECTED HEALTH INFORMATION",
+     "confidence": 0.946
+    },
+    {
+     "text": "Brightline may use protected health information only to perform billing services for Cedar Valley.",
+     "confidence": 0.978
+    },
+    {
+     "text": "Brightline applies administrative, physical and technical safeguards to that information.",
+     "confidence": 0.967
+    },
+    {
+     "text": "2. BREACH NOTIFICATION",
+     "confidence": 0.935
+    },
+    {
+     "text": "Brightline reports any breach of unsecured information to Cedar Valley without unreasonable delay and within 10 days of discovery.",
+     "confidence": 0.963
+    }
+   ],
+   "tables": []
+  },
+  {
+   "page": 2,
+   "lines": [
+    {
+     "text": "Business Associate Agreement - Cedar Valley Clinics and Brightline Billing - page 2",
+     "confidence": 0.99
+    },
+    {
+     "text": "3. AUDIT AND INSPECTION",
+     "confidence": 0.988
+    },
+    {
+     "text": "Cedar Valley may inspect Brightline's safeguards and records once a year or after a breach.",
+     "confidence": 0.945
+    },
+    {
+     "text": "4. TERM AND TERMINATION",
+     "confidence": 0.95
+    },
+    {
+     "text": "Cedar Valley may terminate this agreement if Brightline materially breaches it and does not cure within 30 days.",
+     "confidence": 0.977
+    },
+    {
+     "text": "5. INDEMNIFICATION",
+     "confidence": 0.966
+    },
+    {
+     "text": "Brightline indemnifies Cedar Valley against penalties arising from Brightline's violation of this agreement.",
+     "confidence": 0.964
+    }
+   ],
+   "tables": []
+  },
+  {
+   "page": 3,
+   "lines": [
+    {
+     "text": "Business Associate Agreement - Cedar Valley Clinics and Brightline Billing - page 3",
+     "confidence": 0.99
+    },
+    {
+     "text": "Appx B ~~ F3e sch3du|e /// ##",
+     "confidence": 0.337
+    },
+    {
+     "text": "l1ne 1tem ;; cod3 .. ^^ %%",
+     "confidence": 0.366
+    },
+    {
+     "text": "Sch#d Fe\u20ac ||| ??? 0O0O",
+     "confidence": 0.387
+    },
+    {
+     "text": "~~~ ::: [[ ]] ###",
+     "confidence": 0.479
+    }
+   ],
+   "tables": [
+    {
+     "table_id": "hc-business-associate:t-fees",
+     "confidence": 0.42,
+     "rows": [
+      [
+       "Cod3",
+       "F\u20ace"
+      ],
+      [
+       "B1",
+       "1O0"
+      ],
+      [
+       "B2",
+       "2?0"
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

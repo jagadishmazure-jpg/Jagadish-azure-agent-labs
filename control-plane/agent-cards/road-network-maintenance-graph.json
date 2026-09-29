@@ -1,0 +1,86 @@
+{
+  "capabilities": {
+    "extensions": [
+      {
+        "description": "Owner, deployment zone, side effects, deny list, eval gate, reviewer",
+        "params": {
+          "agent_id": "road-network-maintenance-graph",
+          "data_zone": "us",
+          "denied_tools": [
+            "*close_road*",
+            "*dispatch*",
+            "*issue_work_order*"
+          ],
+          "deployed": false,
+          "eval_gate": [
+            "route_quality >= 1.0",
+            "detour_within_15pct >= 1.0",
+            "disconnection_accuracy >= 1.0",
+            "hospital_access_accuracy >= 1.0",
+            "pairwise_order_accuracy >= 1.0",
+            "must_fix_included >= 1.0",
+            "budget_respected >= 1.0"
+          ],
+          "human_review": "city engineer",
+          "model_deployment": "road-plan-narrative",
+          "owner": "city-public-works",
+          "side_effect_class": "none (plan only; no work orders)",
+          "stage": "lab"
+        },
+        "uri": "urn:azure-agent-labs:control-plane:v1"
+      }
+    ],
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "Planning coordinator over graph engineering, graph features, maintenance priority and closure impact agents on a synthetic OSM-style city graph; commits a plan only within budget and hands it to a city engineer.",
+  "name": "Road Maintenance Planner",
+  "provider": {
+    "organization": "Azure agent labs (demo)",
+    "url": "https://github.com/jagadishmazure-jpg"
+  },
+  "skills": [
+    {
+      "description": "Rank segments by need, usage and connectivity; select within budget.",
+      "id": "plan_repairs",
+      "inputModes": [
+        "application/json"
+      ],
+      "name": "Plan repairs",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "graph",
+        "planning"
+      ]
+    },
+    {
+      "description": "Approve, trim or return the plan.",
+      "id": "record_engineer_decision",
+      "inputModes": [
+        "application/json"
+      ],
+      "name": "Record engineer decision",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "hitl"
+      ]
+    }
+  ],
+  "supportedInterfaces": [
+    {
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0",
+      "url": "http://road-network-maintenance-graph.local/a2a"
+    }
+  ],
+  "version": "0.1.0"
+}

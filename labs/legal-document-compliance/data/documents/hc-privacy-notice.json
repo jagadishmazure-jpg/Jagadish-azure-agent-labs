@@ -1,0 +1,87 @@
+{
+ "doc_id": "hc-privacy-notice",
+ "domain": "healthcare",
+ "title": "Patient Privacy Practices - Cedar Valley Clinics",
+ "pages": [
+  {
+   "page": 1,
+   "lines": [
+    {
+     "text": "Patient Privacy Practices - Cedar Valley Clinics",
+     "confidence": 0.99
+    },
+    {
+     "text": "1. HOW WE USE YOUR INFORMATION",
+     "confidence": 0.985
+    },
+    {
+     "text": "We use your health information to treat you, to get paid, and to run our clinics.",
+     "confidence": 0.944
+    },
+    {
+     "text": "We do not sell your information.",
+     "confidence": 0.962
+    },
+    {
+     "text": "2. IF YOUR INFORMATION IS EXPOSED",
+     "confidence": 0.995
+    },
+    {
+     "text": "If a breach affects your information we will notify you in writing within 60 days.",
+     "confidence": 0.974
+    }
+   ],
+   "tables": [
+    {
+     "table_id": "hc-privacy-notice:t-retention",
+     "confidence": 0.931,
+     "rows": [
+      [
+       "Record type",
+       "Kept for"
+      ],
+      [
+       "Adult chart",
+       "10 years"
+      ],
+      [
+       "Minor chart",
+       "Until age 28"
+      ],
+      [
+       "Billing",
+       "7 years",
+       "extra"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "page": 2,
+   "lines": [
+    {
+     "text": "Patient Privacy Practices - Cedar Valley Clinics - page 2",
+     "confidence": 0.99
+    },
+    {
+     "text": "3. CHANGES TO THIS NOTICE",
+     "confidence": 0.964
+    },
+    {
+     "text": "We may change this notice and will post the new version in every clinic.",
+     "confidence": 0.968
+    },
+    {
+     "text": "4. GOVERNING LAW",
+     "confidence": 0.988
+    },
+    {
+     "text": "This notice is interpreted under the laws of the State of Oregon.",
+     "confidence": 0.936
+    }
+   ],
+   "tables": []
+  }
+ ]
+}

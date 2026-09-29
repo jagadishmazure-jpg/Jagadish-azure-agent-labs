@@ -1,0 +1,493 @@
+{
+ "nodes": [
+  {
+   "id": "W00",
+   "lat": 45.0,
+   "lon": 7.0,
+   "tags": {
+    "amenity": "fire_station"
+   }
+  },
+  {
+   "id": "W01",
+   "lat": 45.0,
+   "lon": 7.0022,
+   "tags": {}
+  },
+  {
+   "id": "W02",
+   "lat": 45.0,
+   "lon": 7.0044,
+   "tags": {}
+  },
+  {
+   "id": "W03",
+   "lat": 45.0,
+   "lon": 7.0066,
+   "tags": {}
+  },
+  {
+   "id": "W10",
+   "lat": 45.0018,
+   "lon": 7.0,
+   "tags": {}
+  },
+  {
+   "id": "W11",
+   "lat": 45.0018,
+   "lon": 7.0022,
+   "tags": {}
+  },
+  {
+   "id": "W12",
+   "lat": 45.0018,
+   "lon": 7.0044,
+   "tags": {
+    "shop": "market"
+   }
+  },
+  {
+   "id": "W13",
+   "lat": 45.0018,
+   "lon": 7.0066,
+   "tags": {}
+  },
+  {
+   "id": "W20",
+   "lat": 45.0036,
+   "lon": 7.0,
+   "tags": {}
+  },
+  {
+   "id": "W21",
+   "lat": 45.0036,
+   "lon": 7.0022,
+   "tags": {
+    "amenity": "school"
+   }
+  },
+  {
+   "id": "W22",
+   "lat": 45.0036,
+   "lon": 7.0044,
+   "tags": {}
+  },
+  {
+   "id": "W23",
+   "lat": 45.0036,
+   "lon": 7.0066,
+   "tags": {}
+  },
+  {
+   "id": "W30",
+   "lat": 45.0054,
+   "lon": 7.0,
+   "tags": {}
+  },
+  {
+   "id": "W31",
+   "lat": 45.0054,
+   "lon": 7.0022,
+   "tags": {}
+  },
+  {
+   "id": "W32",
+   "lat": 45.0054,
+   "lon": 7.0044,
+   "tags": {}
+  },
+  {
+   "id": "W33",
+   "lat": 45.0054,
+   "lon": 7.0066,
+   "tags": {}
+  },
+  {
+   "id": "E0",
+   "lat": 45.0018,
+   "lon": 7.011,
+   "tags": {}
+  },
+  {
+   "id": "E1",
+   "lat": 45.0036,
+   "lon": 7.011,
+   "tags": {}
+  },
+  {
+   "id": "E2",
+   "lat": 45.0036,
+   "lon": 7.0132,
+   "tags": {
+    "amenity": "hospital"
+   }
+  },
+  {
+   "id": "E3",
+   "lat": 45.0054,
+   "lon": 7.011,
+   "tags": {}
+  },
+  {
+   "id": "C1",
+   "lat": 44.9982,
+   "lon": 7.0,
+   "tags": {}
+  },
+  {
+   "id": "C2",
+   "lat": 44.9964,
+   "lon": 7.0,
+   "tags": {}
+  }
+ ],
+ "ways": [
+  {
+   "id": "w-W00-W01",
+   "nodes": [
+    "W00",
+    "W01"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W01-W02",
+   "nodes": [
+    "W01",
+    "W02"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W02-W03",
+   "nodes": [
+    "W02",
+    "W03"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W10-W11",
+   "nodes": [
+    "W10",
+    "W11"
+   ],
+   "tags": {
+    "highway": "primary",
+    "maxspeed": 50
+   }
+  },
+  {
+   "id": "w-W11-W12",
+   "nodes": [
+    "W11",
+    "W12"
+   ],
+   "tags": {
+    "highway": "primary",
+    "maxspeed": 50
+   }
+  },
+  {
+   "id": "w-W12-W13",
+   "nodes": [
+    "W12",
+    "W13"
+   ],
+   "tags": {
+    "highway": "primary",
+    "maxspeed": 50
+   }
+  },
+  {
+   "id": "w-W20-W21",
+   "nodes": [
+    "W20",
+    "W21"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W21-W22",
+   "nodes": [
+    "W21",
+    "W22"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W22-W23",
+   "nodes": [
+    "W22",
+    "W23"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W30-W31",
+   "nodes": [
+    "W30",
+    "W31"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W31-W32",
+   "nodes": [
+    "W31",
+    "W32"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W32-W33",
+   "nodes": [
+    "W32",
+    "W33"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W00-W10",
+   "nodes": [
+    "W00",
+    "W10"
+   ],
+   "tags": {
+    "highway": "secondary",
+    "maxspeed": 40
+   }
+  },
+  {
+   "id": "w-W10-W20",
+   "nodes": [
+    "W10",
+    "W20"
+   ],
+   "tags": {
+    "highway": "secondary",
+    "maxspeed": 40
+   }
+  },
+  {
+   "id": "w-W20-W30",
+   "nodes": [
+    "W20",
+    "W30"
+   ],
+   "tags": {
+    "highway": "secondary",
+    "maxspeed": 40
+   }
+  },
+  {
+   "id": "w-W01-W11",
+   "nodes": [
+    "W01",
+    "W11"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W11-W21",
+   "nodes": [
+    "W11",
+    "W21"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W21-W31",
+   "nodes": [
+    "W21",
+    "W31"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W02-W12",
+   "nodes": [
+    "W02",
+    "W12"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W12-W22",
+   "nodes": [
+    "W12",
+    "W22"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W22-W32",
+   "nodes": [
+    "W22",
+    "W32"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W03-W13",
+   "nodes": [
+    "W03",
+    "W13"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W13-W23",
+   "nodes": [
+    "W13",
+    "W23"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W23-W33",
+   "nodes": [
+    "W23",
+    "W33"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W13-E0",
+   "nodes": [
+    "W13",
+    "E0"
+   ],
+   "tags": {
+    "highway": "primary",
+    "maxspeed": 50,
+    "bridge": "yes",
+    "name": "North Bridge"
+   }
+  },
+  {
+   "id": "w-W33-E3",
+   "nodes": [
+    "W33",
+    "E3"
+   ],
+   "tags": {
+    "highway": "secondary",
+    "maxspeed": 40,
+    "bridge": "yes",
+    "name": "South Bridge"
+   }
+  },
+  {
+   "id": "w-E0-E1",
+   "nodes": [
+    "E0",
+    "E1"
+   ],
+   "tags": {
+    "highway": "primary",
+    "maxspeed": 50
+   }
+  },
+  {
+   "id": "w-E1-E2",
+   "nodes": [
+    "E1",
+    "E2"
+   ],
+   "tags": {
+    "highway": "primary",
+    "maxspeed": 40
+   }
+  },
+  {
+   "id": "w-E1-E3",
+   "nodes": [
+    "E1",
+    "E3"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30
+   }
+  },
+  {
+   "id": "w-W00-C1",
+   "nodes": [
+    "W00",
+    "C1"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30,
+    "name": "Quarry Lane"
+   }
+  },
+  {
+   "id": "w-C1-C2",
+   "nodes": [
+    "C1",
+    "C2"
+   ],
+   "tags": {
+    "highway": "residential",
+    "maxspeed": 30,
+    "name": "Quarry Lane"
+   }
+  }
+ ]
+}

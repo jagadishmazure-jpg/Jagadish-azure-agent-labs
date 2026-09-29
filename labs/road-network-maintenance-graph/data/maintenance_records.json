@@ -1,0 +1,157 @@
+[
+ {
+  "segment_id": "w-W00-W01",
+  "last_resurfaced": 2018,
+  "failed_patches": 1
+ },
+ {
+  "segment_id": "w-W01-W02",
+  "last_resurfaced": 2017,
+  "failed_patches": 0
+ },
+ {
+  "segment_id": "w-W02-W03",
+  "last_resurfaced": 2008,
+  "failed_patches": 0
+ },
+ {
+  "segment_id": "w-W10-W11",
+  "last_resurfaced": 2014,
+  "failed_patches": 0
+ },
+ {
+  "segment_id": "w-W11-W12",
+  "last_resurfaced": 2018,
+  "failed_patches": 1
+ },
+ {
+  "segment_id": "w-W12-W13",
+  "last_resurfaced": 2009,
+  "failed_patches": 1
+ },
+ {
+  "segment_id": "w-W20-W21",
+  "last_resurfaced": 2016,
+  "failed_patches": 2
+ },
+ {
+  "segment_id": "w-W21-W22",
+  "last_resurfaced": 2012,
+  "failed_patches": 1
+ },
+ {
+  "segment_id": "w-W22-W23",
+  "last_resurfaced": 2009,
+  "failed_patches": 1
+ },
+ {
+  "segment_id": "w-W30-W31",
+  "last_resurfaced": 2014,
+  "failed_patches": 0
+ },
+ {
+  "segment_id": "w-W31-W32",
+  "last_resurfaced": 2022,
+  "failed_patches": 2
+ },
+ {
+  "segment_id": "w-W32-W33",
+  "last_resurfaced": 2022,
+  "failed_patches": 2
+ },
+ {
+  "segment_id": "w-W00-W10",
+  "last_resurfaced": 2018,
+  "failed_patches": 1
+ },
+ {
+  "segment_id": "w-W10-W20",
+  "last_resurfaced": 2012,
+  "failed_patches": 1
+ },
+ {
+  "segment_id": "w-W20-W30",
+  "last_resurfaced": 2020,
+  "failed_patches": 0
+ },
+ {
+  "segment_id": "w-W01-W11",
+  "last_resurfaced": 2015,
+  "failed_patches": 1
+ },
+ {
+  "segment_id": "w-W11-W21",
+  "last_resurfaced": 2022,
+  "failed_patches": 2
+ },
+ {
+  "segment_id": "w-W21-W31",
+  "last_resurfaced": 2021,
+  "failed_patches": 1
+ },
+ {
+  "segment_id": "w-W02-W12",
+  "last_resurfaced": 2009,
+  "failed_patches": 1
+ },
+ {
+  "segment_id": "w-W12-W22",
+  "last_resurfaced": 2016,
+  "failed_patches": 2
+ },
+ {
+  "segment_id": "w-W22-W32",
+  "last_resurfaced": 2020,
+  "failed_patches": 0
+ },
+ {
+  "segment_id": "w-W03-W13",
+  "last_resurfaced": 2019,
+  "failed_patches": 2
+ },
+ {
+  "segment_id": "w-W13-W23",
+  "last_resurfaced": 2012,
+  "failed_patches": 1
+ },
+ {
+  "segment_id": "w-W23-W33",
+  "last_resurfaced": 2019,
+  "failed_patches": 2
+ },
+ {
+  "segment_id": "w-W13-E0",
+  "last_resurfaced": 2009,
+  "failed_patches": 3
+ },
+ {
+  "segment_id": "w-W33-E3",
+  "last_resurfaced": 2009,
+  "failed_patches": 1
+ },
+ {
+  "segment_id": "w-E0-E1",
+  "last_resurfaced": 2008,
+  "failed_patches": 0
+ },
+ {
+  "segment_id": "w-E1-E2",
+  "last_resurfaced": 2010,
+  "failed_patches": 2
+ },
+ {
+  "segment_id": "w-E1-E3",
+  "last_resurfaced": 2010,
+  "failed_patches": 2
+ },
+ {
+  "segment_id": "w-W00-C1",
+  "last_resurfaced": 2013,
+  "failed_patches": 2
+ },
+ {
+  "segment_id": "w-C1-C2",
+  "last_resurfaced": 2009,
+  "failed_patches": 3
+ }
+]

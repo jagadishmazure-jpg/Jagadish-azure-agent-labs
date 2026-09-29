@@ -1,0 +1,88 @@
+{
+  "capabilities": {
+    "extensions": [
+      {
+        "description": "Owner, deployment zone, side effects, deny list, eval gate, reviewer",
+        "params": {
+          "agent_id": "legal-document-compliance",
+          "data_zone": "us",
+          "denied_tools": [
+            "*delete*",
+            "*execute_contract*",
+            "*send_to_counterparty*",
+            "*sign*"
+          ],
+          "deployed": false,
+          "eval_gate": [
+            "clause_precision >= 0.95",
+            "clause_recall >= 0.95",
+            "label_accuracy >= 0.9",
+            "tables_accounted >= 1.0",
+            "junk_page_recall >= 1.0",
+            "false_page_rejects <= 0",
+            "audit_pass_rate >= 1.0",
+            "compliance_checks_passed >= 1.0"
+          ],
+          "human_review": "compliance reviewer",
+          "model_deployment": "clause-classifier",
+          "owner": "legal-ops",
+          "side_effect_class": "none (review packet only)",
+          "stage": "lab"
+        },
+        "uri": "urn:azure-agent-labs:control-plane:v1"
+      }
+    ],
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "Parses banking, insurance and healthcare contracts and policies through reusable MCP tools into clause and table packets; a router picks the domain profile, a reliability agent scores OCR, an auditor can request one redo or escalate, and uncertain items go to a reviewer.",
+  "name": "Contract and Policy Compliance Extractor",
+  "provider": {
+    "organization": "Azure agent labs (demo)",
+    "url": "https://github.com/jagadishmazure-jpg"
+  },
+  "skills": [
+    {
+      "description": "Parse, extract, classify and score one document.",
+      "id": "review_document",
+      "inputModes": [
+        "application/json"
+      ],
+      "name": "Review document",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "documents",
+        "compliance"
+      ]
+    },
+    {
+      "description": "Accept or relabel clauses; nothing is written back to the contract system.",
+      "id": "record_reviewer_decision",
+      "inputModes": [
+        "application/json"
+      ],
+      "name": "Record reviewer decision",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "hitl"
+      ]
+    }
+  ],
+  "supportedInterfaces": [
+    {
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0",
+      "url": "http://legal-document-compliance.local/a2a"
+    }
+  ],
+  "version": "0.1.0"
+}

@@ -1,0 +1,102 @@
+{
+ "doc_id": "ins-property-wording",
+ "domain": "insurance",
+ "title": "Commercial Property Policy Wording - Harbourline Mutual",
+ "pages": [
+  {
+   "page": 1,
+   "lines": [
+    {
+     "text": "Commercial Property Policy Wording - Harbourline Mutual",
+     "confidence": 0.99
+    },
+    {
+     "text": "1. COVER",
+     "confidence": 0.995
+    },
+    {
+     "text": "We insure the buildings and contents listed in the schedule against sudden physical loss or damage.",
+     "confidence": 0.946
+    },
+    {
+     "text": "2. EXCLUSIONS",
+     "confidence": 0.972
+    },
+    {
+     "text": "We do not pay for loss caused by wear and tear, gradual pollution, or war.",
+     "confidence": 0.994
+    },
+    {
+     "text": "Flood is excluded unless the schedule shows the flood extension.",
+     "confidence": 0.943
+    },
+    {
+     "text": "3. CLAIMS NOTIFICATION",
+     "confidence": 0.943
+    },
+    {
+     "text": "You must tell us about any loss within 14 days and send supporting invoices within 60 days.",
+     "confidence": 0.988
+    },
+    {
+     "text": "Late notice may reduce what we pay if it harmed our ability to investigate.",
+     "confidence": 0.945
+    }
+   ],
+   "tables": []
+  },
+  {
+   "page": 2,
+   "lines": [
+    {
+     "text": "Commercial Property Policy Wording - Harbourline Mutual - page 2",
+     "confidence": 0.99
+    },
+    {
+     "text": "4. LIMITS OF LIABILITY",
+     "confidence": 0.976
+    },
+    {
+     "text": "Our total liability in any period of insurance will not exceed the limits in the table below.",
+     "confidence": 0.949
+    },
+    {
+     "text": "5. CANCELLATION",
+     "confidence": 0.978
+    },
+    {
+     "text": "Either party may cancel this policy with 30 days written notice; unused premium is refunded pro rata.",
+     "confidence": 0.994
+    }
+   ],
+   "tables": [
+    {
+     "table_id": "ins-property-wording:t-limits",
+     "confidence": 0.964,
+     "rows": [
+      [
+       "Section",
+       "Limit (USD)",
+       "Deductible (USD)"
+      ],
+      [
+       "Buildings",
+       "5,000,000",
+       "10,000"
+      ],
+      [
+       "Contents",
+       "1,500,000",
+       "5,000"
+      ],
+      [
+       "Business interruption",
+       "750,000",
+       "72 hours"
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

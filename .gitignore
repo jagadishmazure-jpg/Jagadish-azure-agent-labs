@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.env
+.azure/
+evals-out/
+*.egg-info/
+dist/
+build/
+labs/*/infra/*.json
+# internal reference material never belongs in this repo
+refs/

@@ -1,0 +1,86 @@
+{
+ "doc_id": "ins-claims-standard",
+ "domain": "insurance",
+ "title": "Claims Handling Standard - Harbourline Mutual",
+ "pages": [
+  {
+   "page": 1,
+   "lines": [
+    {
+     "text": "Claims Handling Standard - Harbourline Mutual",
+     "confidence": 0.99
+    },
+    {
+     "text": "1. SCOPE",
+     "confidence": 0.969
+    },
+    {
+     "text": "This standard applies to every first-party property claim handled in house or by a delegated adjuster.",
+     "confidence": 0.935
+    },
+    {
+     "text": "2. FIRST NOTICE AND ACKNOWLEDGEMENT",
+     "confidence": 0.96
+    },
+    {
+     "text": "Every notice of loss is acknowledged within two business days and assigned a handler.",
+     "confidence": 0.995
+    }
+   ],
+   "tables": [
+    {
+     "table_id": "ins-claims-standard:t-service-levels",
+     "confidence": 0.922,
+     "rows": [
+      [
+       "Step",
+       "Target",
+       "Escalation"
+      ],
+      [
+       "Acknowledge",
+       "2 days",
+       "Team lead"
+      ],
+      [
+       "Site visit",
+       "5 days",
+       "Claims manager"
+      ],
+      [
+       "Settlement offer",
+       "30 days",
+       "Head of claims"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "page": 2,
+   "lines": [
+    {
+     "text": "Claims Handling Standard - Harbourline Mutual - page 2",
+     "confidence": 0.99
+    },
+    {
+     "text": "3. DELEGATED AUTHORITY AUDITS",
+     "confidence": 0.956
+    },
+    {
+     "text": "Harbourline may audit any delegated adjuster's files on ten days notice.",
+     "confidence": 0.97
+    },
+    {
+     "text": "4. INDEMNITY FOR ADJUSTER ERRORS",
+     "confidence": 0.949
+    },
+    {
+     "text": "A delegated adjuster indemnifies Harbourline for losses caused by its negligent handling.",
+     "confidence": 0.965
+    }
+   ],
+   "tables": []
+  }
+ ]
+}

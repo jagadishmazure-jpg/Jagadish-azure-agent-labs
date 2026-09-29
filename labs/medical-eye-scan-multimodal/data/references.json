@@ -1,0 +1,22 @@
+[
+ {
+  "ref_id": "REF-DR-01",
+  "label": "diabetic_retinopathy",
+  "text": "Reference atlas note: bright waxy specks plus dark dots scattered away from the disc point to diabetic retinal damage; grade by count and spread."
+ },
+ {
+  "ref_id": "REF-GL-01",
+  "label": "glaucoma",
+  "text": "Reference atlas note: an enlarged pale cup inside the optic disc, especially with raised eye pressure, is the classic sign of glaucomatous nerve loss."
+ },
+ {
+  "ref_id": "REF-AMD-01",
+  "label": "amd",
+  "text": "Reference atlas note: small pale deposits grouped at the macula in older adults suggest age-related macular degeneration."
+ },
+ {
+  "ref_id": "REF-N-01",
+  "label": "normal",
+  "text": "Reference atlas note: a healthy scan shows an evenly lit background, a pink disc with a small cup and no specks or dots."
+ }
+]

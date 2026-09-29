@@ -1,0 +1,118 @@
+{
+ "doc_id": "bank-term-loan",
+ "domain": "banking",
+ "title": "Term Loan Facility Agreement - Northwind Credit Union and Alder Tools Ltd",
+ "pages": [
+  {
+   "page": 1,
+   "lines": [
+    {
+     "text": "Term Loan Facility Agreement - Northwind Credit Union and Alder Tools Ltd",
+     "confidence": 0.99
+    },
+    {
+     "text": "1. DEFINITIONS",
+     "confidence": 0.957
+    },
+    {
+     "text": "In this agreement Borrower means Alder Tools Ltd and Lender means Northwind Credit Union.",
+     "confidence": 0.961
+    },
+    {
+     "text": "Business Day means a day banks in the governing jurisdiction are open.",
+     "confidence": 0.98
+    },
+    {
+     "text": "2. INTEREST AND REPAYMENT",
+     "confidence": 0.945
+    },
+    {
+     "text": "The Borrower shall pay interest monthly in arrears at the rate in the schedule below.",
+     "confidence": 0.965
+    },
+    {
+     "text": "Each instalment is due on the fifth Business Day of the month; late amounts accrue default interest of 2 percent.",
+     "confidence": 0.989
+    }
+   ],
+   "tables": [
+    {
+     "table_id": "bank-term-loan:t-repayment-schedule",
+     "confidence": 0.977,
+     "rows": [
+      [
+       "Instalment",
+       "Due month",
+       "Principal (USD)"
+      ],
+      [
+       "1",
+       "2026-01",
+       "25,000"
+      ],
+      [
+       "2",
+       "2026-02",
+       "25,000"
+      ],
+      [
+       "3",
+       "2026-03",
+       "25,000"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "page": 2,
+   "lines": [
+    {
+     "text": "Term Loan Facility Agreement - Northwind Credit Union and Alder Tools Ltd - page 2",
+     "confidence": 0.99
+    },
+    {
+     "text": "3. EVENTS OF DEFAULT AND TERMINATION",
+     "confidence": 0.962
+    },
+    {
+     "text": "The Lender may terminate the facility and demand repayment if an instalment is unpaid for 30 days.",
+     "confidence": 0.951
+    },
+    {
+     "text": "Insolvency of the Borrower is an immediate event of default.",
+     "confidence": 0.954
+    },
+    {
+     "text": "4. KNOW YOUR CUSTOMER AND ANTI-MONEY LAUNDERING",
+     "confidence": 0.93
+    },
+    {
+     "text": "The Borrower shall provide beneficial ownership information and identity documents on request.",
+     "confidence": 0.947
+    },
+    {
+     "text": "The Lender may suspend drawdowns while sanctions screening is pending.",
+     "confidence": 0.944
+    },
+    {
+     "text": "5. CONFIDENTIALITY",
+     "confidence": 0.963
+    },
+    {
+     "text": "Each party shall keep the terms of this agreement confidential and disclose them only to advisers bound by similar duties.",
+     "confidence": 0.96
+    },
+    {
+     "text": "6. GOVERNING LAW",
+     "confidence": 0.988
+    },
+    {
+     "text": "This agreement is governed by the laws of the State of New York and the parties submit to its courts.",
+     "confidence": 0.988
+    }
+   ],
+   "tables": []
+  }
+ ]
+}

@@ -1,0 +1,289 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       30.0,
+       10.0
+      ],
+      [
+       30.2,
+       10.0
+      ],
+      [
+       30.2,
+       10.2
+      ],
+      [
+       30.0,
+       10.2
+      ],
+      [
+       30.0,
+       10.0
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "kind": "region",
+    "region_id": "harbor-delta",
+    "name": "Harbor Delta",
+    "population": 820000,
+    "coastal": true,
+    "elevation_m": 4,
+    "prior": {
+     "flood": 0.08,
+     "quake": 0.02,
+     "tsunami": 0.01
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       30.2,
+       10.0
+      ],
+      [
+       30.4,
+       10.0
+      ],
+      [
+       30.4,
+       10.2
+      ],
+      [
+       30.2,
+       10.2
+      ],
+      [
+       30.2,
+       10.0
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "kind": "region",
+    "region_id": "river-valley",
+    "name": "Kestrel River Valley",
+    "population": 450000,
+    "coastal": false,
+    "elevation_m": 35,
+    "prior": {
+     "flood": 0.1,
+     "quake": 0.02,
+     "tsunami": 0.0005
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       30.4,
+       10.0
+      ],
+      [
+       30.599999999999998,
+       10.0
+      ],
+      [
+       30.599999999999998,
+       10.2
+      ],
+      [
+       30.4,
+       10.2
+      ],
+      [
+       30.4,
+       10.0
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "kind": "region",
+    "region_id": "fault-ridge",
+    "name": "Granite Fault Ridge",
+    "population": 210000,
+    "coastal": false,
+    "elevation_m": 420,
+    "prior": {
+     "flood": 0.02,
+     "quake": 0.06,
+     "tsunami": 0.0005
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       30.2,
+       10.2
+      ],
+      [
+       30.4,
+       10.2
+      ],
+      [
+       30.4,
+       10.399999999999999
+      ],
+      [
+       30.2,
+       10.399999999999999
+      ],
+      [
+       30.2,
+       10.2
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "kind": "region",
+    "region_id": "upland-plateau",
+    "name": "Juniper Upland",
+    "population": 90000,
+    "coastal": false,
+    "elevation_m": 900,
+    "prior": {
+     "flood": 0.01,
+     "quake": 0.01,
+     "tsunami": 0.0005
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.05,
+     10.05
+    ]
+   },
+   "properties": {
+    "kind": "facility",
+    "facility_id": "hosp-harbor",
+    "name": "Harbor General Hospital",
+    "category": "hospital"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.12,
+     10.08
+    ]
+   },
+   "properties": {
+    "kind": "facility",
+    "facility_id": "shelter-delta",
+    "name": "Delta School Shelter",
+    "category": "shelter"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.02,
+     10.15
+    ]
+   },
+   "properties": {
+    "kind": "facility",
+    "facility_id": "port-fuel",
+    "name": "Port Fuel Terminal",
+    "category": "hazmat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.28,
+     10.06
+    ]
+   },
+   "properties": {
+    "kind": "facility",
+    "facility_id": "hosp-valley",
+    "name": "Valley Regional Hospital",
+    "category": "hospital"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.33,
+     10.17
+    ]
+   },
+   "properties": {
+    "kind": "facility",
+    "facility_id": "dam-kestrel",
+    "name": "Kestrel Dam",
+    "category": "dam"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.48,
+     10.1
+    ]
+   },
+   "properties": {
+    "kind": "facility",
+    "facility_id": "school-ridge",
+    "name": "Ridge Primary School",
+    "category": "school"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.52,
+     10.04
+    ]
+   },
+   "properties": {
+    "kind": "facility",
+    "facility_id": "bridge-granite",
+    "name": "Granite Pass Bridge",
+    "category": "bridge"
+   }
+  }
+ ]
+}

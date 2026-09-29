@@ -1,0 +1,5 @@
+{"case_id": "use-rain", "scenario": "rain-only", "region_id": "river-valley", "hazard": "flood", "must_use": ["weather"]}
+{"case_id": "use-rain-and-sar", "scenario": "monsoon-flood", "region_id": "river-valley", "hazard": "flood", "must_use": ["weather", "satellite"]}
+{"case_id": "use-seismic-gnss-insar", "scenario": "ridge-quake", "region_id": "fault-ridge", "hazard": "quake", "must_use": ["seismic", "displacement", "satellite"]}
+{"case_id": "use-tide-gauge", "scenario": "offshore-quake", "region_id": "harbor-delta", "hazard": "tsunami", "must_use": ["seismic", "displacement"]}
+{"case_id": "neighbour-fallback", "scenario": "flood-satellite-outage", "region_id": "river-valley", "hazard": "flood", "must_use": ["weather", "satellite"]}

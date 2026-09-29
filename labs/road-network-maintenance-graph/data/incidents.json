@@ -1,0 +1,37 @@
+[
+ {
+  "incident_id": "INC-2023-014",
+  "segment_id": "w-W13-E0",
+  "type": "deck joint failure",
+  "year": 2023,
+  "closure_hours": 36
+ },
+ {
+  "incident_id": "INC-2024-002",
+  "segment_id": "w-W11-W12",
+  "type": "crash",
+  "year": 2024,
+  "closure_hours": 4
+ },
+ {
+  "incident_id": "INC-2024-019",
+  "segment_id": "w-E0-E1",
+  "type": "water main break",
+  "year": 2024,
+  "closure_hours": 20
+ },
+ {
+  "incident_id": "INC-2025-007",
+  "segment_id": "w-C1-C2",
+  "type": "pothole damage claim",
+  "year": 2025,
+  "closure_hours": 0
+ },
+ {
+  "incident_id": "INC-2025-011",
+  "segment_id": "w-W33-E3",
+  "type": "flooding",
+  "year": 2025,
+  "closure_hours": 12
+ }
+]

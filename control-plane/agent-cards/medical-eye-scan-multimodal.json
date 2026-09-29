@@ -1,0 +1,87 @@
+{
+  "capabilities": {
+    "extensions": [
+      {
+        "description": "Owner, deployment zone, side effects, deny list, eval gate, reviewer",
+        "params": {
+          "agent_id": "medical-eye-scan-multimodal",
+          "data_zone": "us",
+          "denied_tools": [
+            "*order_*",
+            "*prescribe*",
+            "*write_back*",
+            "ehr_*",
+            "fhir_*"
+          ],
+          "deployed": false,
+          "eval_gate": [
+            "top1_accuracy >= 0.85",
+            "ece <= 0.15",
+            "ood_deny_rate >= 1.0",
+            "false_deny_rate <= 0.05",
+            "citation_validity >= 1.0",
+            "ehr_writes <= 0"
+          ],
+          "human_review": "ophthalmologist",
+          "model_deployment": "eye-explainer",
+          "owner": "imaging-research",
+          "side_effect_class": "research-log only",
+          "stage": "lab"
+        },
+        "uri": "urn:azure-agent-labs:control-plane:v1"
+      }
+    ],
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "Research demo on synthetic arrays: image + metadata -> similar labeled cases -> calibrated, cited hypotheses for an ophthalmologist. Denies out-of-distribution scans; never writes to an EHR.",
+  "name": "Retinal Scan Research Triage (NOT A MEDICAL DEVICE)",
+  "provider": {
+    "organization": "Azure agent labs (demo)",
+    "url": "https://github.com/jagadishmazure-jpg"
+  },
+  "skills": [
+    {
+      "description": "Run the scan graph; returns hypotheses with cited case ids or a denial.",
+      "id": "triage_scan",
+      "inputModes": [
+        "application/json"
+      ],
+      "name": "Triage synthetic scan",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "research",
+        "multimodal"
+      ]
+    },
+    {
+      "description": "Record the ophthalmologist's decision in the research log (not an EHR).",
+      "id": "record_review",
+      "inputModes": [
+        "application/json"
+      ],
+      "name": "Record reader review",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "hitl"
+      ]
+    }
+  ],
+  "supportedInterfaces": [
+    {
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0",
+      "url": "http://medical-eye-scan-multimodal.local/a2a"
+    }
+  ],
+  "version": "0.1.0"
+}

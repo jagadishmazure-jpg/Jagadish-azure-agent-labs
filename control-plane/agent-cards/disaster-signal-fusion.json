@@ -1,0 +1,84 @@
+{
+  "capabilities": {
+    "extensions": [
+      {
+        "description": "Owner, deployment zone, side effects, deny list, eval gate, reviewer",
+        "params": {
+          "agent_id": "disaster-signal-fusion",
+          "data_zone": "us",
+          "denied_tools": [
+            "*alert*",
+            "*broadcast*",
+            "*notify_public*",
+            "*siren*"
+          ],
+          "deployed": false,
+          "eval_gate": [
+            "signal_usage_rate >= 1.0",
+            "rain_sensitivity >= 1.0",
+            "replay_hazard_accuracy >= 0.85",
+            "no_public_alert >= 1.0"
+          ],
+          "human_review": "duty officer (alert decision)",
+          "model_deployment": "dsf-situation-summary",
+          "owner": "public-safety-ops",
+          "side_effect_class": "none (advice only)",
+          "stage": "lab"
+        },
+        "uri": "urn:azure-agent-labs:control-plane:v1"
+      }
+    ],
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "description": "Fuses seismic, satellite, weather and ground-displacement signals into flood, earthquake and tsunami risk with decision support for a duty officer. Never issues public alerts.",
+  "name": "Disaster Signal Fusion Desk",
+  "provider": {
+    "organization": "Azure agent labs (demo)",
+    "url": "https://github.com/jagadishmazure-jpg"
+  },
+  "skills": [
+    {
+      "description": "Run the fusion graph for one region; returns a review packet.",
+      "id": "assess_region",
+      "inputModes": [
+        "application/json"
+      ],
+      "name": "Assess region",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "hazard",
+        "fusion"
+      ]
+    },
+    {
+      "description": "Record the duty officer's decision on the proposed warning review.",
+      "id": "record_decision",
+      "inputModes": [
+        "application/json"
+      ],
+      "name": "Record officer decision",
+      "outputModes": [
+        "application/json"
+      ],
+      "tags": [
+        "hitl"
+      ]
+    }
+  ],
+  "supportedInterfaces": [
+    {
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0",
+      "url": "http://disaster-signal-fusion.local/a2a"
+    }
+  ],
+  "version": "0.1.0"
+}

@@ -1,0 +1,219 @@
+[
+ {
+  "segment_id": "w-W00-W01",
+  "pci": 74,
+  "potholes": 0,
+  "repair_cost_usd": 45000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W01-W02",
+  "pci": 71,
+  "potholes": 2,
+  "repair_cost_usd": 30000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W02-W03",
+  "pci": 40,
+  "potholes": 14,
+  "repair_cost_usd": 36000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W10-W11",
+  "pci": 80,
+  "potholes": 2,
+  "repair_cost_usd": 25000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W11-W12",
+  "pci": 51,
+  "potholes": 9,
+  "repair_cost_usd": 55000,
+  "repair_days": 4
+ },
+ {
+  "segment_id": "w-W12-W13",
+  "pci": 55,
+  "potholes": 8,
+  "repair_cost_usd": 58000,
+  "repair_days": 4
+ },
+ {
+  "segment_id": "w-W20-W21",
+  "pci": 91,
+  "potholes": 0,
+  "repair_cost_usd": 30000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W21-W22",
+  "pci": 88,
+  "potholes": 1,
+  "repair_cost_usd": 40000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W22-W23",
+  "pci": 87,
+  "potholes": 0,
+  "repair_cost_usd": 35000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W30-W31",
+  "pci": 82,
+  "potholes": 1,
+  "repair_cost_usd": 35000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W31-W32",
+  "pci": 81,
+  "potholes": 3,
+  "repair_cost_usd": 30000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W32-W33",
+  "pci": 79,
+  "potholes": 3,
+  "repair_cost_usd": 45000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W00-W10",
+  "pci": 89,
+  "potholes": 3,
+  "repair_cost_usd": 45000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W10-W20",
+  "pci": 85,
+  "potholes": 1,
+  "repair_cost_usd": 25000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W20-W30",
+  "pci": 94,
+  "potholes": 3,
+  "repair_cost_usd": 45000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W01-W11",
+  "pci": 92,
+  "potholes": 3,
+  "repair_cost_usd": 35000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W11-W21",
+  "pci": 84,
+  "potholes": 0,
+  "repair_cost_usd": 45000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W21-W31",
+  "pci": 83,
+  "potholes": 1,
+  "repair_cost_usd": 40000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W02-W12",
+  "pci": 72,
+  "potholes": 3,
+  "repair_cost_usd": 35000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W12-W22",
+  "pci": 82,
+  "potholes": 2,
+  "repair_cost_usd": 35000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W22-W32",
+  "pci": 72,
+  "potholes": 1,
+  "repair_cost_usd": 35000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W03-W13",
+  "pci": 74,
+  "potholes": 1,
+  "repair_cost_usd": 45000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W13-W23",
+  "pci": 77,
+  "potholes": 1,
+  "repair_cost_usd": 35000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W23-W33",
+  "pci": 92,
+  "potholes": 0,
+  "repair_cost_usd": 35000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W13-E0",
+  "pci": 48,
+  "potholes": 6,
+  "repair_cost_usd": 160000,
+  "repair_days": 10
+ },
+ {
+  "segment_id": "w-W33-E3",
+  "pci": 63,
+  "potholes": 4,
+  "repair_cost_usd": 140000,
+  "repair_days": 9
+ },
+ {
+  "segment_id": "w-E0-E1",
+  "pci": 58,
+  "potholes": 7,
+  "repair_cost_usd": 60000,
+  "repair_days": 4
+ },
+ {
+  "segment_id": "w-E1-E2",
+  "pci": 92,
+  "potholes": 1,
+  "repair_cost_usd": 35000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-E1-E3",
+  "pci": 84,
+  "potholes": 2,
+  "repair_cost_usd": 45000,
+  "repair_days": 2
+ },
+ {
+  "segment_id": "w-W00-C1",
+  "pci": 35,
+  "potholes": 18,
+  "repair_cost_usd": 42000,
+  "repair_days": 3
+ },
+ {
+  "segment_id": "w-C1-C2",
+  "pci": 22,
+  "potholes": 31,
+  "repair_cost_usd": 38000,
+  "repair_days": 3
+ }
+]

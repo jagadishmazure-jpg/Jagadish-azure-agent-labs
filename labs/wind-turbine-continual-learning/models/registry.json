@@ -1,0 +1,28 @@
+{
+  "champion": "iforest-v1",
+  "versions": [
+    {
+      "version": "iforest-v1",
+      "params": {
+        "kind": "isolation_forest",
+        "n_estimators": 100,
+        "contamination": 0.02,
+        "random_state": 7
+      },
+      "training_data": "normal_train.json",
+      "training_data_hash": "3e4263fa25e0ac84",
+      "scores": {
+        "recall": 1.0,
+        "fpr": 0.0,
+        "per_fault_recall": {
+          "gearbox_bearing": 1.0,
+          "generator_overheat": 1.0,
+          "icing": 1.0,
+          "pitch_fault": 1.0
+        }
+      },
+      "registered_by": "initial registration"
+    }
+  ],
+  "audit": []
+}
