@@ -69,7 +69,7 @@ of shortcut contribution scores exist to surface, and a reason to engineer featu
 | Loop engineering | not in scope | single pass per scan; reader overrides are logged, not fed back |
 | Evaluation engineering | implemented | accuracy, ECE, OOD deny, false deny, citation validity, EHR writes |
 | Harness engineering | implemented | OOD gate, abstain threshold, deny-listed tools, output validation with fallback |
-| Infrastructure engineering | implemented (compile-only) | `infra/main.bicep`: AI Search, Storage, App Insights, Foundry vision deployment |
+| Infrastructure engineering | implemented (compile-only) | `infra/main.bicep`: AI Search, Storage, App Insights, Foundry vision deployment; Terraform twin in [`infra/terraform`](infra/terraform/README.md) |
 | Continual learning | not in scope | the case library is static; see the wind-turbine lab |
 
 ## Domains you learn

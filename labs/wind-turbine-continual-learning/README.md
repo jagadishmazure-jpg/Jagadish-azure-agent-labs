@@ -113,7 +113,7 @@ Accuracy after the lesson is 0.90, not 1.0. On two drifting model-B sensors the 
 | Loop engineering | implemented | every incident closes a loop: review → evaluation → signal → candidate → gate → gating |
 | Evaluation engineering | implemented | diagnosis quality, action quality (pre-review checks), learning quality (lesson gate + gating precision) |
 | Harness engineering | implemented | deny-listed tools, retries, schema validation, step budget, read-only registries |
-| Infrastructure engineering | implemented (compile-only) | `infra/main.bicep`: Event Hubs, Cosmos DB episodes, Storage, App Insights, Foundry DataZoneStandard |
+| Infrastructure engineering | implemented (compile-only) | `infra/main.bicep`: Event Hubs, Cosmos DB episodes, Storage, App Insights, Foundry DataZoneStandard; Terraform twin in [`infra/terraform`](infra/terraform/README.md) |
 | Continual learning | implemented | evaluated experience → reusable lessons, promoted by gate, applied with context gating to avoid negative transfer |
 
 ## Domains you learn

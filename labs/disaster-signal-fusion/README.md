@@ -72,7 +72,7 @@ records why. QC handlers in `functions.py` are shaped like Azure Functions trigg
 | Loop engineering | not in scope | one pass per assessment; no re-query loop |
 | Evaluation engineering | implemented | signal usage, rain sensitivity, historical replay, fallbacks, no-public-alert |
 | Harness engineering | implemented | deny-listed alert tools, schema validation, retries, step budget, summary citation / phrase check |
-| Infrastructure engineering | implemented (compile-only) | `infra/main.bicep`: Event Hubs, ADLS Gen2, Function App, Maps, AI Search, Foundry, App Insights |
+| Infrastructure engineering | implemented (compile-only) | `infra/main.bicep`: Event Hubs, ADLS Gen2, Function App, Maps, AI Search, Foundry, App Insights; Terraform twin in [`infra/terraform`](infra/terraform/README.md) |
 | Continual learning | not in scope | the archive is read-only here; see the wind-turbine lab |
 
 ## Domains you learn

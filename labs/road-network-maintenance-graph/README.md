@@ -77,7 +77,7 @@ What-if closures (`PlanningDesk.plan(what_if=[...])`) run the same impact agent 
 | Loop engineering | implemented | coordinator ↔ worker loop, bounded by the worker-call budget |
 | Evaluation engineering | **implemented (emphasis)** | route quality, maintenance priority, closure impact, recommendation usefulness |
 | Harness engineering | implemented | `BudgetGuard` (money, worker calls, staging), deny-listed tools, step budget |
-| Infrastructure engineering | implemented (compile-only) | `infra/main.bicep`: Container Apps environment, Storage, App Insights, Foundry |
+| Infrastructure engineering | implemented (compile-only) | `infra/main.bicep`: Container Apps environment, Storage, App Insights, Foundry; Terraform twin in [`infra/terraform`](infra/terraform/README.md) |
 | Continual learning | not in scope | historical closures are used for evaluation, not for updating weights |
 
 ## Domains you learn

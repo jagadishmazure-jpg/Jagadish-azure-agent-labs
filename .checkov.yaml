@@ -1,0 +1,39 @@
+# checkov config for the lab Terraform stacks (used by .github/workflows/infra-ci.yml).
+# Each skip is a deliberate trade-off for small, cost-min lab environments; anything not listed
+# fails the pull request. The prod answer for each group is in docs/best-practices.md.
+framework:
+  - terraform
+compact: true
+quiet: true
+skip-path:
+  - .venv
+skip-check:
+  # --- premium-only features: customer-managed keys, zone/geo redundancy, Search replicas for
+  #     SLA, App Service zone redundancy / minimum instances, storage analytics logging.
+  - CKV2_AZURE_1
+  - CKV2_AZURE_22
+  - CKV_AZURE_100
+  - CKV_AZURE_206
+  - CKV_AZURE_208
+  - CKV_AZURE_209
+  - CKV_AZURE_212
+  - CKV_AZURE_225
+  - CKV_AZURE_33
+  # --- public endpoints: the labs keep public endpoints with Entra-ID-only auth (keys, SAS and
+  #     local users disabled). Private endpoints are the documented prod path.
+  - CKV2_AZURE_32
+  - CKV2_AZURE_33
+  - CKV_AZURE_59
+  - CKV_AZURE_99
+  - CKV_AZURE_101
+  - CKV_AZURE_109
+  - CKV_AZURE_124
+  - CKV_AZURE_134
+  - CKV_AZURE_189
+  - CKV_AZURE_221
+  # --- Key Vault purge protection is a variable: off in dev for clean teardown, on in prod.tfvars.
+  - CKV_AZURE_42
+  - CKV_AZURE_110
+  # --- false positive: reads the deprecated attribute; the module sets
+  #     local_authentication_enabled = false.
+  - CKV_AZURE_140

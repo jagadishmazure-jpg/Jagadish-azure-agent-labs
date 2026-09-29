@@ -97,7 +97,7 @@ Per-domain precision and recall (banking, insurance, healthcare) are also report
 | Loop engineering | implemented | auditor → classifier redo loop, bounded to one retry |
 | Evaluation engineering | implemented | precision/recall gate, document quality, OCR confidence, uncertainty, compliance, reliability |
 | Harness engineering | implemented | MCP gateway (identity, deny-list, retry, schema), step budget, tool deny-list |
-| Infrastructure engineering | implemented (compile-only) | reusable MCP servers; `infra/main.bicep`: Document Intelligence, AI Search, Foundry, App Insights |
+| Infrastructure engineering | implemented (compile-only) | reusable MCP servers; `infra/main.bicep`: Document Intelligence, AI Search, Foundry, App Insights; Terraform twin in [`infra/terraform`](infra/terraform/README.md) |
 | Continual learning | not in scope | reviewer outcomes are not fed back; see the wind-turbine lab |
 
 ## Domains you learn
