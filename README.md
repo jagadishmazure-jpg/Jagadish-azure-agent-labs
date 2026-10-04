@@ -12,7 +12,7 @@ synthetic data and Bicep.
 - **Evaluated, not just demoed:** each lab has a gold set and an eval gate that fails CI on regression. Examples are precision/recall on clause ids, calibration error on the eye scans, historical closure replay for roads, and a lesson-promotion gate for turbines.
 - **Safety is designed in:** no automatic public alerts, no EHR write-back, no work orders, no contract signing, and no silent retraining. The rules are enforced in code and checked by evals.
 - **Explainable:** per-feature contribution scores (SHAP when installed, otherwise ablation) appear in the eye-scan and turbine reports. The disaster lab reports per-source evidence contributions.
-- **Tests and CI:** 149 offline tests, five eval gates, and a Bicep compile check in GitHub Actions.
+- **Tests and CI:** 157 offline tests, five eval gates, and a Bicep compile check in GitHub Actions.
 - **Infrastructure as code, twice:** each lab has Bicep and a Terraform twin ([`infra/terraform`](infra/terraform/README.md)) with offline plan tests, plus a GitHub Actions pipeline with OIDC login and dev -> prod approval gates. The pipeline is switched off until a subscription exists ([docs/deployment.md](docs/deployment.md)).
 
 **Skills demonstrated:** Microsoft Agent Framework, Azure AI Foundry (DataZoneStandard deployments), Azure AI Search (hybrid + vector), Azure AI Vision, Document Intelligence, Azure Maps, Event Hubs, ADLS Gen2, Azure Functions, Cosmos DB, Entra managed identity, MCP, OpenTelemetry / App Insights, Bicep, Terraform, GitHub Actions (OIDC), Python, NetworkX, scikit-learn, Pydantic.
@@ -96,7 +96,7 @@ Every lab README maps the same 12 layers to code and marks each one honestly. Su
 git clone https://github.com/jagadishmazure-jpg/Jagadish-azure-agent-labs.git
 cd Jagadish-azure-agent-labs
 make install          # python -m venv .venv + pip install -e ".[dev]"
-make test             # 149 tests, offline
+make test             # 157 tests, offline
 make evals            # all five eval gates, exit 1 on regression
 make bicep            # compile every lab's infra/main.bicep (needs the Bicep CLI; never deploys)
 # Terraform (offline, mocked provider): cd labs/<lab>/infra/terraform && terraform init -backend=false && terraform test
@@ -148,6 +148,9 @@ docs/                  deployment.md · best-practices.md · adr/ (architecture 
 |---|---|
 | [`docs/best-practices.md`](docs/best-practices.md) | Enterprise cloud and agentic AI practices, each marked implemented, written-not-deployed or planned, with links to the code |
 | [`docs/adr/`](docs/adr/README.md) | Architecture decision records (Bicep + Terraform, offline mocks, OIDC, eval gates, gated deploy, ...) |
+| [`docs/implementation-guide.md`](docs/implementation-guide.md) | How a lab is built step by step and how to move it to Azure |
+| [`docs/adopt-this.md`](docs/adopt-this.md) | Checklist for reusing the patterns |
+| [`docs/components/`](docs/components/README.md) | One page per shared component, 17 sections each |
 | [`docs/deployment.md`](docs/deployment.md) | The GitHub Actions pipeline and the one-time Azure setup it needs |
 | [`SECURITY.md`](SECURITY.md) · [`CONTRIBUTING.md`](CONTRIBUTING.md) · [`CHANGELOG.md`](CHANGELOG.md) | How to report a vulnerability, how to contribute, what changed |
 
