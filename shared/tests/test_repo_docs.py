@@ -26,7 +26,8 @@ SECTIONS = [
     "Adopt this",
 ]
 SKIP_DIRS = {".git", ".venv", "__pycache__", ".pytest_cache", ".ruff_cache", ".terraform", "evals-out"}
-NO_README: set[Path] = set()
+# .github: GitHub would show .github/README.md instead of the root README on the repo page.
+NO_README = {Path(".github")}
 
 
 def _component_docs():
@@ -77,6 +78,7 @@ def test_every_folder_has_a_readme():
         if not (d / "README.md").exists():
             missing.append(str(rel))
     assert not missing, missing
+    assert not (ROOT / ".github/README.md").exists()
 
 
 def test_codeowners():
