@@ -18,6 +18,8 @@ jobs:
         run: python scripts/export_agent_cards.py --check
       - name: Secrets scan
         run: python scripts/secrets_scan.py
+      - name: Docs match code and output
+        run: python scripts/doc_drift.py --check
 
   shared:
     runs-on: ubuntu-latest
