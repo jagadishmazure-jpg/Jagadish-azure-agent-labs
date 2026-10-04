@@ -1,6 +1,6 @@
 # Changelog
 
-Notable changes, newest first. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). There are no versioned releases, so entries are grouped by date.
+Notable changes, newest first. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). There are no versioned releases, so entries are grouped by milestone.
 
 ## Unreleased
 
@@ -9,12 +9,16 @@ Notable changes, newest first. The format follows [Keep a Changelog](https://kee
 - `docs/best-practices.md`: cloud and agentic AI practices with honest status and links.
 - Architecture decision records in `docs/adr/`.
 - `SECURITY.md`, `CONTRIBUTING.md` and this changelog.
+- Lab READMEs in a 17-section format; `docs/components/` pages for the shared layer and infrastructure; `docs/implementation-guide.md` and `docs/adopt-this.md`.
+- `scripts/doc_drift.py`: generated outputs and code excerpts in the docs, checked in CI; `scripts/component_demos.py`.
+- A README with a file table in every folder, `.github/CODEOWNERS`, and `shared/tests/test_repo_docs.py`.
 
 ### Changed
 
 - README sections follow one order: what, why, architecture, run, test, deploy, limits.
+- Dates removed from ADRs and this changelog.
 
-## 2026-09-29
+## Milestone 1
 
 ### Added
 
