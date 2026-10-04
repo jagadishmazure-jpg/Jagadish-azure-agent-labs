@@ -1,7 +1,6 @@
 # ADR 0006: One infrastructure stack per lab
 
 - **Status:** Accepted
-- **Date:** 2026-09-29
 
 ## Context
 

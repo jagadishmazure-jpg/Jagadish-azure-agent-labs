@@ -6,7 +6,7 @@ readme = "README.md"
 license = { text = "MIT" }
 authors = [{ name = "Jagadish Meduri" }]
 requires-python = ">=3.11"
-# Resolved and installed on 2026-09-29. The Azure SDKs are NOT dependencies: every Azure adapter is a
+# Pinned to the versions the tests were run with. The Azure SDKs are NOT dependencies: every Azure adapter is a
 # stub that raises until it is wired up, so the labs install and run with no cloud packages at all.
 dependencies = [
   "agent-framework-core==1.19.0",
@@ -51,6 +51,7 @@ filterwarnings = ["ignore::DeprecationWarning"]
 
 [tool.ruff]
 line-length = 110
+extend-exclude = ["*.md"]
 target-version = "py311"
 src = [
   "shared",
