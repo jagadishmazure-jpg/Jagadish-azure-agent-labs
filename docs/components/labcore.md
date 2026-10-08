@@ -152,6 +152,7 @@ shared/tests/test_repo_docs.py::test_every_folder_has_a_readme
 shared/tests/test_repo_docs.py::test_codeowners
 shared/tests/test_repo_docs.py::test_no_placeholders_or_dates_in_docs
 shared/tests/test_repo_docs.py::test_readme_test_count_matches_collection
+shared/tests/test_repo_docs.py::test_workflows_are_hardened
 ```
 <!-- /output -->
 
@@ -168,7 +169,7 @@ The shared tests run as their own CI job; each lab's tests and eval gate run in 
 
 - No keys, secrets or connection strings exist in code; identity is a managed identity (mocked offline).
 - Deny-lists are declared per lab and recorded in the lab's agent card.
-- `scripts/secrets_scan.py` runs in CI.
+- `scripts/secrets_scan.py` runs in CI, next to a gitleaks scan of the full git history.
 
 ## 12. Observability
 

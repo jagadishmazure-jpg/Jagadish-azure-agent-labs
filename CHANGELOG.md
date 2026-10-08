@@ -6,6 +6,8 @@ Notable changes, newest first. The format follows [Keep a Changelog](https://kee
 
 ### Added
 
+- Supply-chain hardening: every GitHub Action pinned to a commit SHA with a version comment, top-level `permissions` on every workflow, a gitleaks job in CI, a CodeQL workflow, `.github/dependabot.yml` and a guard test (`test_workflows_are_hardened`).
+- GitHub settings: Dependabot alerts and security updates, private vulnerability reporting and a `main` ruleset (no force-push or deletion; CI required on pull requests).
 - `docs/best-practices.md`: cloud and agentic AI practices with honest status and links.
 - Architecture decision records in `docs/adr/`.
 - `SECURITY.md`, `CONTRIBUTING.md` and this changelog.
