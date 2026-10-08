@@ -20,9 +20,10 @@ def test_event_hubs_public_access_follows_private_networking_in_both_tools(lab):
     assert "publicNetworkAccess: privateNetworking ? 'Disabled' : 'Enabled'" in bicep
     assert "public_network_access_enabled = !var.private_networking" in tf
     # a private endpoint on the namespace, the servicebus private DNS zone and an NSG, in both
-    assert "groupIds: ['namespace']" in bicep and "privatelink.servicebus.windows.net" in bicep
+    assert "groupIds: ['namespace']" in bicep
+    assert re.search(r"name: 'privatelink\.servicebus\.windows\.net'", bicep)
     assert "networkSecurityGroup: { id: nsg.id }" in bicep
-    assert 'eventhubs = "privatelink.servicebus.windows.net"' in tf
+    assert re.search(r'eventhubs = "privatelink\.servicebus\.windows\.net"', tf)
     module = ROOT / "infra/terraform/modules"
     assert 'subresource_names              = ["namespace"]' in (module / "eventhubs/main.tf").read_text()
     net = (module / "private-network/main.tf").read_text()
