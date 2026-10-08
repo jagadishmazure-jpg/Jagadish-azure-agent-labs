@@ -33,3 +33,18 @@ variable "receiver_principal_ids" {
   type    = map(string)
   default = {}
 }
+
+variable "public_network_access_enabled" {
+  description = "true (default) keeps the cheap public demo; false with private_endpoint locks the namespace to the VNet."
+  type        = bool
+  default     = true
+}
+
+variable "private_endpoint" {
+  description = "null = no private endpoint; otherwise the subnet and the privatelink.servicebus.windows.net zone id."
+  type = object({
+    subnet_id   = string
+    dns_zone_id = string
+  })
+  default = null
+}

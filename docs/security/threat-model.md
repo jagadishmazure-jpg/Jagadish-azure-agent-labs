@@ -81,4 +81,6 @@ alert, EHR, work order, contract signature, model promotion), which the labs do 
   tools and human review.
 * Event Hubs, Foundry, AI Search and managed identity are stand-ins offline; the IaC is untested
   against Azure.
+* Lab services use public endpoints with Entra ID auth by default. Event Hubs has an opt-in private
+  endpoint (`private_networking`); the other services have none yet.
 * The eye-scan lab is research triage on synthetic arrays, not a medical device.

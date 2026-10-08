@@ -40,6 +40,9 @@ module "eventhubs" {
   hubs                   = { turbine-telemetry = { partitions = 4, retention_days = 1 } }
   consumer_groups        = {}
   receiver_principal_ids = { workload = module.foundation.identity_principal_id }
+  # Public stays the cheap default; private_networking locks the namespace to the VNet.
+  public_network_access_enabled = !var.private_networking
+  private_endpoint              = var.private_networking ? { subnet_id = module.network[0].pe_subnet_id, dns_zone_id = module.network[0].zone_ids["eventhubs"] } : null
 }
 
 module "cosmos" {
@@ -74,4 +77,15 @@ module "foundry" {
   model_name            = var.diagnosis_model
   model_version         = var.model_version
   capacity              = local.p.capacity
+}
+
+# ---- optional private networking for Event Hubs (off by default; not deployed) ----
+module "network" {
+  source              = "../../../../infra/terraform/modules/private-network"
+  count               = var.private_networking ? 1 : 0
+  resource_group_name = azurerm_resource_group.this.name
+  location            = var.location
+  tags                = local.tags
+  name                = module.naming.vnet
+  dns_zones           = { eventhubs = "privatelink.servicebus.windows.net" }
 }

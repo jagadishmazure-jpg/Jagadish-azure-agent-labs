@@ -12,6 +12,9 @@ param dataZone string = 'us'
 param summaryModel string = 'gpt-5-mini'
 param summaryModelVersion string = '2025-08-07'
 
+@description('Opt-in: private endpoint for the Event Hubs namespace in an NSG-protected VNet, public access off. Off by default (cheap demo; consumers must then run inside or be peered to the VNet).')
+param privateNetworking bool = false
+
 var suffix = uniqueString(resourceGroup().id)
 var tags = { lab: 'disaster-signal-fusion', deployed: 'never-from-this-repo' }
 
@@ -41,7 +44,7 @@ resource eventHubs 'Microsoft.EventHub/namespaces@2024-01-01' = {
   location: location
   tags: tags
   sku: { name: 'Standard', tier: 'Standard', capacity: 1 }
-  properties: { disableLocalAuth: true, minimumTlsVersion: '1.2' }
+  properties: { disableLocalAuth: true, minimumTlsVersion: '1.2', publicNetworkAccess: privateNetworking ? 'Disabled' : 'Enabled' }
 }
 
 resource signalsHub 'Microsoft.EventHub/namespaces/eventhubs@2024-01-01' = {
@@ -137,6 +140,57 @@ resource summaryDeployment 'Microsoft.CognitiveServices/accounts/deployments@202
   name: 'dsf-situation-summary'
   sku: { name: 'DataZoneStandard', capacity: 10 }
   properties: { model: { format: 'OpenAI', name: summaryModel, version: summaryModelVersion } }
+}
+
+// ---- optional private networking for Event Hubs (off by default; mirrors terraform module private-network) ----
+resource nsg 'Microsoft.Network/networkSecurityGroups@2024-05-01' = if (privateNetworking) {
+  name: '${prefix}-nsg-${suffix}'
+  location: location
+  tags: tags
+  properties: { securityRules: [] } // default rules only; tighten per client policy
+}
+
+resource vnet 'Microsoft.Network/virtualNetworks@2024-05-01' = if (privateNetworking) {
+  name: '${prefix}-vnet-${suffix}'
+  location: location
+  tags: tags
+  properties: {
+    addressSpace: { addressPrefixes: ['10.50.0.0/16'] }
+    subnets: [
+      { name: 'pe', properties: { addressPrefix: '10.50.2.0/24', networkSecurityGroup: { id: nsg.id }, privateEndpointNetworkPolicies: 'Disabled' } }
+    ]
+  }
+}
+
+resource evhZone 'Microsoft.Network/privateDnsZones@2020-06-01' = if (privateNetworking) {
+  name: 'privatelink.servicebus.windows.net'
+  location: 'global'
+  tags: tags
+}
+
+resource evhZoneLink 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2020-06-01' = if (privateNetworking) {
+  parent: evhZone
+  name: 'link-${prefix}-${suffix}'
+  location: 'global'
+  properties: { virtualNetwork: { id: vnet.id }, registrationEnabled: false }
+}
+
+resource evhPe 'Microsoft.Network/privateEndpoints@2024-05-01' = if (privateNetworking) {
+  name: '${prefix}-pe-evh-${suffix}'
+  location: location
+  tags: tags
+  properties: {
+    subnet: { id: vnet!.properties.subnets[0].id }
+    privateLinkServiceConnections: [
+      { name: 'evh', properties: { privateLinkServiceId: eventHubs.id, groupIds: ['namespace'] } }
+    ]
+  }
+}
+
+resource evhPeDns 'Microsoft.Network/privateEndpoints/privateDnsZoneGroups@2024-05-01' = if (privateNetworking) {
+  parent: evhPe
+  name: 'default'
+  properties: { privateDnsZoneConfigs: [{ name: 'servicebus', properties: { privateDnsZoneId: evhZone.id } }] }
 }
 
 output dataZone string = dataZone

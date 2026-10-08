@@ -1,6 +1,6 @@
-# `modules/eventhubs`
+# `modules/private-network`
 
-Event Hubs namespace (Standard, local auth disabled), hubs, consumer groups and the data-receiver role. Optional private endpoint with public network access off (`private_endpoint`, `public_network_access_enabled`); public stays the default for a cheap demo.
+Optional private networking for a lab: a VNet with a private-endpoint subnet behind an NSG (default rules), plus private DNS zones linked to the VNet. A lab calls it only when `private_networking = true`. Written and plan-tested offline; not deployed.
 
 | File | What it does |
 |---|---|

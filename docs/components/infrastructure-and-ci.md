@@ -27,8 +27,9 @@ flowchart LR
 
 1. `ci.yml` lints, checks that agent cards match `card.py`, scans for secrets, checks the docs for drift, runs shared tests, and runs each lab's tests and eval gate in a matrix.
 2. The bicep job builds every `labs/*/infra/main.bicep`; lab tests also compile their own Bicep when the CLI is present.
-3. `infra.yml` runs Terraform fmt, validate and `terraform test` with mocked providers, then tflint and checkov.
-4. `deploy.yml` and `teardown.yml` only run when the repository variable `DEPLOY_ENABLED` is `true`; it is not set.
+3. The two Event Hubs labs (disaster signal fusion, wind turbine) take `privateNetworking` / `private_networking` (default `false`): a VNet with a private-endpoint subnet behind an NSG, a private endpoint on the namespace, the `privatelink.servicebus.windows.net` zone, and Event Hubs public access off. The Terraform side lives in the shared `private-network` module and the `eventhubs` module's `private_endpoint` input.
+4. `infra.yml` runs Terraform fmt, validate and `terraform test` with mocked providers, then tflint and checkov.
+5. `deploy.yml` and `teardown.yml` only run when the repository variable `DEPLOY_ENABLED` is `true`; it is not set.
 
 ## 4. Key files
 
@@ -59,7 +60,7 @@ def build(main_bicep: Path) -> subprocess.CompletedProcess:
 
 The Foundry account in a lab's Bicep:
 
-<!-- code: labs/disaster-signal-fusion/infra/main.bicep:125-133 -->
+<!-- code: labs/disaster-signal-fusion/infra/main.bicep:128-136 -->
 ```bicep
 resource foundry 'Microsoft.CognitiveServices/accounts@2024-10-01' = {
   name: '${prefix}-ai-${suffix}'
@@ -103,6 +104,12 @@ Resource types declared across the five labs' Bicep:
       5 Microsoft.Insights/components@2020-02-02
       5 Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31
       1 Microsoft.Maps/accounts@2023-06-01
+      2 Microsoft.Network/networkSecurityGroups@2024-05-01
+      2 Microsoft.Network/privateDnsZones/virtualNetworkLinks@2020-06-01
+      2 Microsoft.Network/privateDnsZones@2020-06-01
+      2 Microsoft.Network/privateEndpoints/privateDnsZoneGroups@2024-05-01
+      2 Microsoft.Network/privateEndpoints@2024-05-01
+      2 Microsoft.Network/virtualNetworks@2024-05-01
       5 Microsoft.OperationalInsights/workspaces@2023-09-01
       3 Microsoft.Search/searchServices@2023-11-01
       5 Microsoft.Storage/storageAccounts@2023-05-01
@@ -134,6 +141,7 @@ labs/wind-turbine-continual-learning/tests/test_turbine_workflow.py::test_bicep_
 ## 11. Security and governance
 
 - Local (key) auth disabled on Foundry, Search, Event Hubs and Cosmos accounts.
+- Event Hubs is no longer hard-coded public: the opt-in private networking option puts it behind a private endpoint with public access off, in Bicep and Terraform, checked by `shared/tests/test_infra_private_networking.py` and the `event_hubs_private` plan tests.
 - One user-assigned managed identity per lab.
 - Agent cards and docs are drift-checked, so what is reviewed is what runs.
 
@@ -166,6 +174,12 @@ Microsoft.EventHub/namespaces/eventhubs/consumergroups
 Microsoft.Insights/components
 Microsoft.ManagedIdentity/userAssignedIdentities
 Microsoft.Maps/accounts
+Microsoft.Network/networkSecurityGroups
+Microsoft.Network/privateDnsZones
+Microsoft.Network/privateDnsZones/virtualNetworkLinks
+Microsoft.Network/privateEndpoints
+Microsoft.Network/privateEndpoints/privateDnsZoneGroups
+Microsoft.Network/virtualNetworks
 Microsoft.OperationalInsights/workspaces
 Microsoft.Search/searchServices
 Microsoft.Storage/storageAccounts
@@ -176,7 +190,8 @@ Microsoft.Web/sites
 
 ## 15. Limitations
 
-- Public network access is enabled on some services to keep the labs simple; private endpoints are not written.
+- Public network access stays the default to keep the labs cheap. Only Event Hubs has a private networking option so far (written and plan-tested, not deployed); Foundry, Search, Cosmos, Storage and Maps are still public.
+- With Event Hubs private, the disaster lab's Consumption-plan Function cannot reach it (Linux Consumption has no VNet integration); producers and consumers must move into, or peer with, the VNet first.
 - No deployment has run from this repo.
 
 ## 16. Interview talking points
@@ -187,5 +202,5 @@ Microsoft.Web/sites
 ## 17. Adopt this
 
 1. Pick Bicep or Terraform and delete the other.
-2. Add private endpoints and disable public access.
+2. Turn on `private_networking` for Event Hubs and follow the same pattern for the other data and AI services.
 3. Set up OIDC and the two environments, then set `DEPLOY_ENABLED`.

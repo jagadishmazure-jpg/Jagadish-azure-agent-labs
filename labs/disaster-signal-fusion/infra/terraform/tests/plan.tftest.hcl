@@ -47,3 +47,35 @@ run "prod_standard" {
     error_message = "prod resource group name"
   }
 }
+
+run "event_hubs_public_by_default" {
+  command = plan
+
+  variables {
+    environment = "dev"
+  }
+
+  assert {
+    condition     = length(module.network) == 0 && module.eventhubs.private_endpoint_count == 0 && module.eventhubs.public_network_access_enabled
+    error_message = "Event Hubs stays public by default (cheap demo)"
+  }
+}
+
+run "event_hubs_private" {
+  command = plan
+
+  variables {
+    environment        = "prod"
+    private_networking = true
+  }
+
+  assert {
+    condition     = module.eventhubs.private_endpoint_count == 1 && module.eventhubs.public_network_access_enabled == false
+    error_message = "private networking adds a private endpoint and turns Event Hubs public access off"
+  }
+
+  assert {
+    condition     = startswith(module.network[0].nsg_name, "nsg-")
+    error_message = "the private-endpoint subnet sits behind an NSG"
+  }
+}

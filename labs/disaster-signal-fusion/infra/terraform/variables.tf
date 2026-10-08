@@ -79,3 +79,9 @@ variable "key_vault_purge_protection" {
   type    = bool
   default = false
 }
+
+variable "private_networking" {
+  description = "Private endpoint for the Event Hubs namespace in an NSG-protected VNet, public access off. Off by default: the Consumption-plan Function cannot join a VNet, so it cannot reach a private namespace until it moves to Flex Consumption or Premium with VNet integration."
+  type        = bool
+  default     = false
+}

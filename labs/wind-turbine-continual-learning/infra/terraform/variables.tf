@@ -79,3 +79,9 @@ variable "key_vault_purge_protection" {
   type    = bool
   default = false
 }
+
+variable "private_networking" {
+  description = "Private endpoint for the Event Hubs namespace in an NSG-protected VNet, public access off. Off by default: producers and the training job must then run inside, or be peered to, the VNet, and this lab provisions no compute of its own."
+  type        = bool
+  default     = false
+}

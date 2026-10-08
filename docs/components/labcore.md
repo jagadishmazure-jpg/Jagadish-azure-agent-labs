@@ -130,6 +130,9 @@ LAB_MODE=prod -> LAB_MODE must be offline or azure, got 'prod'
 <!-- output: python -m pytest --co -q -p no:cacheprovider shared/tests | grep '::' -->
 ```text
 shared/tests/test_explain.py::test_ablation_attributes_linear_model_exactly
+shared/tests/test_infra_private_networking.py::test_event_hubs_public_access_follows_private_networking_in_both_tools[disaster-signal-fusion]
+shared/tests/test_infra_private_networking.py::test_event_hubs_public_access_follows_private_networking_in_both_tools[wind-turbine-continual-learning]
+shared/tests/test_infra_private_networking.py::test_event_hubs_module_is_no_longer_hard_coded_public
 shared/tests/test_labcore.py::test_mode_switch_selects_stub_that_raises
 shared/tests/test_labcore.py::test_bad_mode_rejected
 shared/tests/test_labcore.py::test_zone_policy_rejects_global_and_other_zone

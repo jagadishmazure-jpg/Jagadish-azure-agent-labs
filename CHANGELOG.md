@@ -6,6 +6,7 @@ Notable changes, newest first. The format follows [Keep a Changelog](https://kee
 
 ### Added
 
+- Private networking option for Event Hubs (was hard-coded public) in the disaster signal fusion and wind turbine labs, Bicep and Terraform: `privateNetworking` / `private_networking`, default `false`; adds a VNet with an NSG-protected private-endpoint subnet, a private endpoint and the `privatelink.servicebus.windows.net` zone, and turns public access off. New shared `private-network` Terraform module, a `private_endpoint` input on the `eventhubs` module, two plan tests per lab and 3 parity tests; not deployed.
 - Threat model (`docs/security/threat-model.md`): STRIDE, OWASP Top 10 for LLM Applications and MITRE ATLAS mapped to this repository's components, each row with its control, test evidence and built / planned status.
 - SBOM job in CI: an SPDX JSON software bill of materials of the source tree on every run (artifact `sbom.spdx.json`).
 - Supply-chain hardening: every GitHub Action pinned to a commit SHA with a version comment, top-level `permissions` on every workflow, a gitleaks job in CI, a CodeQL workflow, `.github/dependabot.yml` and a guard test (`test_workflows_are_hardened`).

@@ -4,5 +4,5 @@ Infrastructure for the wind turbine continual learning lab: Bicep plus a Terrafo
 
 | File | What it does |
 |---|---|
-| [`main.bicep`](main.bicep) | Compile-only Bicep for the lab's Azure resources (never deployed). |
+| [`main.bicep`](main.bicep) | Compile-only Bicep for the lab's Azure resources (never deployed). `privateNetworking` (default `false`) puts Event Hubs behind a private endpoint in an NSG-protected VNet with public access off; Terraform: `private_networking`. |
 | [`terraform/`](terraform/README.md) | see its README |
